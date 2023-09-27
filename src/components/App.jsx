@@ -1,6 +1,6 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import { Route, Routes } from 'react-router-dom';
-import { useDispatch,useSelector } from "react-redux";
+// import { useDispatch,useSelector } from "react-redux";
 // import { fetchContacts } from "redux/contacts/operations";
 // import { ContactForm } from "./ContactForm/ContactForm";
 // import { Filter } from "./Filter/Filter";
@@ -14,7 +14,7 @@ import Register from "pages/RegisterPage/RegisterPage";
 import Login from "pages/LoginPage/LoginPage";
 
 export const App = () => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   // const isLoading = useSelector(selectIsLoading);
   // const error = useSelector(selectError);
 
