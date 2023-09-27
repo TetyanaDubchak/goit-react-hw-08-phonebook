@@ -1,8 +1,8 @@
 import { Button, Text } from "./ContactList.styled";
 import { useSelector } from "react-redux";
-import { selectVisibleContacts } from "../../redux/selectors";
+import { selectVisibleContacts } from "../../redux/contacts/selectors";
 import { useDispatch } from "react-redux";
-import { deleteContact } from "../../redux/operations"; 
+import { deleteContact } from "../../redux/contacts/operations"; 
 
 export const ContactList = () => {
 
@@ -14,7 +14,7 @@ export const ContactList = () => {
             {filteredContacts.map(obj => (
                 
                 <li key={obj.id}>
-                    <Text>{obj.name}: {obj.phone}</Text>
+                    <Text>{obj.name}: {obj.number}</Text>
                     <Button type="button" onClick = {() => dispatch(deleteContact(obj.id))} >Delete</Button>
                 </li>
             ))
