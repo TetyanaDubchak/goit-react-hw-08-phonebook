@@ -23,11 +23,13 @@ export const RegisterForm = () => {
         //     if (contactExists) {
         //       alert(`${values.name} is already in contacts`);
         //     } else {
-        //       const name = values.name;
-        //       const phone = values.phone
-        //       dispatch(addContact({name, phone}));
+            const name = values.name;
+            const email = values.email;
+            const password = values.password;
+            console.log('form',values);
+            dispatch(register({name, email, password}));
         //     }
-        //     actions.resetForm()
+            // actions.resetForm()
       }}
     >
       <StyledForm>
