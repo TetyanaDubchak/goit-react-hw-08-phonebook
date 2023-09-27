@@ -1,11 +1,11 @@
-// import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { Formik } from 'formik';
-// import { register } from 'redux/auth/operations';
+import { logIn } from 'redux/auth/operations';
 import { StyledForm, StyledError, Button, Label, Input } from "./LoginForm.styled";
 
 
 export const LoginForm = () => {
-    // const dispatch = useDispatch();
+    const dispatch = useDispatch();
 
 
     return (
@@ -22,9 +22,9 @@ export const LoginForm = () => {
         //     if (contactExists) {
         //       alert(`${values.name} is already in contacts`);
         //     } else {
-        //       const name = values.name;
-        //       const phone = values.phone
-        //       dispatch(addContact({name, phone}));
+              const email = values.email;
+              const password = values.password
+              dispatch(logIn({email, password}));
         //     }
         //     actions.resetForm()
       }}

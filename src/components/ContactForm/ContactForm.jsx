@@ -26,7 +26,7 @@ export const ContactForm = () => {
         <Formik
             initialValues={{
             name: '',
-            phone: '',
+            number: '',
             }}
         validationSchema={SignupSchema}
         onSubmit={(values, actions) => {
@@ -35,8 +35,8 @@ export const ContactForm = () => {
               alert(`${values.name} is already in contacts`);
             } else {
               const name = values.name;
-              const phone = values.phone
-              dispatch(addContact({name, phone}));
+              const number = values.number;
+              dispatch(addContact({name, number}));
             }
             actions.resetForm()
       }}
@@ -48,8 +48,8 @@ export const ContactForm = () => {
             </Label>
         
             <Label>Number
-                    <Input name="phone" type="tel" />
-                    <StyledError name='phone'component='div'/>    
+                    <Input name="number" type="tel" />
+                    <StyledError name='number'component='div'/>    
             </Label>
         
         <Button type="submit">Add contact</Button>

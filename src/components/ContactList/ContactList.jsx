@@ -18,7 +18,6 @@ export const ContactList = () => {
                     <Button type="button" onClick = {() => dispatch(deleteContact(obj.id))} >Delete</Button>
                 </li>
             ))
-
             }
         </ul>
     )
