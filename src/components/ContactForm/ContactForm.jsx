@@ -12,7 +12,7 @@ const phoneValidation = /^((\+[1-9]{1,4}[-]*)|(\([0-9]{2,3}\)[-]*)|([0-9]{2,4})[
      .min(2, 'Too Short!')
      .max(16, 'Too Long!')
      .required('Required'),
-   phone: Yup.string()
+   number: Yup.string()
      .max(19, 'Too Long!')
      .matches(phoneValidation, 'Phone number is not valid, use format XX-XX-XX-XXX-XXX')
      .required('Required'),

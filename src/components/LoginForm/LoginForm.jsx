@@ -18,25 +18,20 @@ export const LoginForm = () => {
             // validationSchema={SignupSchema}
             
         onSubmit={(values, actions) => {
-        //   const contactExists = contacts.some(contact => contact.name.toLowerCase() === values.name.toLowerCase());
-        //     if (contactExists) {
-        //       alert(`${values.name} is already in contacts`);
-        //     } else {
               const email = values.email;
               const password = values.password
               dispatch(logIn({email, password}));
-        //     }
-        //     actions.resetForm()
+              actions.resetForm()
       }}
     >
       <StyledForm>
             <Label>Email
                     <Input name="email" type="email" />
-                    <StyledError name='phone'component='div'/>    
+                    <StyledError name='email'component='div'/>    
             </Label>
             <Label>Password
                     <Input name="password" type="password"/>
-                    <StyledError name='name' component='div'/>
+                    <StyledError name='password' component='div'/>
             </Label>
         
         <Button type="submit">Log In</Button>
