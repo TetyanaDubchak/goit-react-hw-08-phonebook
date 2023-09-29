@@ -1,13 +1,11 @@
 import { RegisterForm } from "components/RegisterForm/RegisterForm";
-import { Helmet } from 'react-helmet';
+import { Box, Text } from "@chakra-ui/react";
 
 export default function Register() {
     return (
-        <div>
-            <Helmet>
-                <title>Register</title>
-            </Helmet>
+        <Box p='30px'>
+            <Text fontFamily='heading' color='primary.100' fontSize='22px' textAlign='center' mb='30px'>Please, register if you do not have an account yet</Text>
             <RegisterForm/>
-        </div>
+        </Box>
     )
 }

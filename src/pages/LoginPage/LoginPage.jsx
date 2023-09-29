@@ -1,14 +1,11 @@
 import { LoginForm } from "components/LoginForm/LoginForm";
-import { Helmet } from 'react-helmet';
+import { Box, Text } from "@chakra-ui/react";
 
 export default function Login() {
     return (
-
-        <div>
-            <Helmet>
-                <title>Login</title>
-            </Helmet>
+        <Box p='30px'>
+            <Text fontFamily='heading' color='primary.100' fontSize='22px' textAlign='center' mb='30px'>Please, login to view contacts</Text>
             <LoginForm/>
-        </div>
+        </Box>
     )
 }

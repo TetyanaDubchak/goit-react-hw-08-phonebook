@@ -1,18 +1,34 @@
 import { NavLink } from 'react-router-dom';
 import { useAuth } from "../../hooks/useAuth";
+import { Link as ChakraLink } from "@chakra-ui/react";
 
 export const Navigation = () => {
     const { isLoggedIn } = useAuth();
 
     return (
         <nav>
-            <NavLink to="/">
+            <ChakraLink fontSize='20px'
+                mr='20px'
+                fontFamily='heading'
+                fontWeight='bold'
+                color='secondary.50'
+                _hover={{
+                color: 'primary.100',
+                textDecoration: 'none'
+            }} as={NavLink} to="/">
                 Home
-            </NavLink>
+            </ChakraLink>
             {isLoggedIn && (
-                <NavLink to='/contacts'>
+                <ChakraLink fontSize='20px'
+                    fontFamily='heading'
+                    fontWeight='bold'
+                    color='secondary.50'
+                    _hover={{
+                        color: 'primary.100',
+                        textDecoration: 'none'
+            }} as={NavLink} to='/contacts'>
                     Contacts
-                </NavLink>
+                </ChakraLink>
             )}
         </nav>
     )

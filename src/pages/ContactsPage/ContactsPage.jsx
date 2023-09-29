@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Helmet } from 'react-helmet';
 import { fetchContacts } from "redux/contacts/operations";
-import { selectError, selectIsLoading } from "redux/contacts/selectors";
+import { selectIsLoading } from "redux/contacts/selectors";
 import { ContactForm } from "components/ContactForm/ContactForm";
 import { ContactList } from "components/ContactList/ContactList";
 import { Filter } from "components/Filter/Filter";
+import { Box, Text } from "@chakra-ui/react";
 
 export default function Contacts() {
     const dispatch = useDispatch();
@@ -16,14 +16,12 @@ export default function Contacts() {
     }, [dispatch]);
 
     return (
-        <div>
-            <Helmet>
-                <title>Contacts</title>
-            </Helmet>
+        <Box p='40px'>
+            <Text fontFamily='heading' color='primary.100' fontSize='30px' textAlign='center' mb='30px'>PhoneBook</Text>
             <ContactForm />
             <Filter />
             <div>{isLoading && 'Request in progress...' }</div>
             <ContactList/>
-        </div>
+        </Box>
     )
 }
